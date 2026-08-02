@@ -19,7 +19,7 @@ export const zh: SiteContent = {
   langToggle: { active: 'zh', enHref: '/', zhHref: '/zh/' },
   cta: { whatsapp: 'WhatsApp 联系', explore: '查看服务', send: '发送' },
   hero: {
-    eyebrow: '马来西亚中小企业的特许会计与咨询',
+    eyebrow: '马来西亚中小企业的会计与咨询',
     headline: ['账目清楚。', '报税准时。', '生意向前。'],
     subtext: '记账、薪资、税务、电子发票，一个团队全包，让报税不再脱期，你能专心把生意做大。',
     creds: [

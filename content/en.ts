@@ -19,7 +19,7 @@ export const en: SiteContent = {
   langToggle: { active: 'en', enHref: '/', zhHref: '/zh/' },
   cta: { whatsapp: 'WhatsApp Us', explore: 'Explore services', send: 'Send message' },
   hero: {
-    eyebrow: 'Chartered accounting & advisory for Malaysian SMEs',
+    eyebrow: 'Accounting & advisory for Malaysian SMEs',
     headline: ['Books in order.', 'Taxes on time.', 'Business moving.'],
     subtext:
       'One team for your books, payroll, tax and e-invoice, so filings never slip and you stay focused on growing the business.',
