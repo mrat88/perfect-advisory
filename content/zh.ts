@@ -20,7 +20,7 @@ export const zh: SiteContent = {
   cta: { whatsapp: 'WhatsApp 联系', explore: '查看服务', send: '发送' },
   hero: {
     eyebrow: '马来西亚中小企业的会计与咨询',
-    headline: ['账目清楚。', '报税准时。', '生意向前。'],
+    headline: ['账目清楚。', '准时报税。', '生意前进。'],
     subtext: '记账、薪资、税务、电子发票，一个团队全包，让报税不再脱期，你能专心把生意做大。',
     creds: [
       { icon: 'seal-check', label: 'MIA 特许会计团队', note: '（待定）' },
@@ -36,11 +36,11 @@ export const zh: SiteContent = {
         { label: '电子发票 · MyInvois', value: '进行中' },
         { label: 'Form E · 年度', value: '3月31日截止', due: true },
       ],
-      footer: '以英语、马来语、华语与粤语为你处理',
+      footer: '能以英语、马来语、华语与粤语沟通',
     },
   },
   strip: [
-    { icon: 'user-focus', title: '单一对接人', text: '同一个人处理你的账目、薪资与税务。' },
+    { icon: 'user-focus', title: '单一对接人', text: '由我们处理你的账目、薪资与税务。' },
     { icon: 'receipt', title: '费用清楚透明', text: '范围事先讲好，账单没有惊喜。' },
     { icon: 'calendar-check', title: '截止日不脱期', text: 'SSM、LHDN、EPF、SOCSO 的日期都替你盯着。' },
     { icon: 'whatsapp-logo', title: 'WhatsApp 找得到人', text: '找到的是真人，不是客服中心。' },
@@ -112,11 +112,11 @@ export const zh: SiteContent = {
   contact: {
     heading: '联系我们',
     fields: { name: '姓名', contact: '电话或电邮', message: '需要什么帮助？' },
-    placeholders: { name: '你的名字', contact: '+60 12 345 6789', message: '例如：为我的 Sdn Bhd 设置电子发票' },
+    placeholders: { name: '你的名字', contact: '+60 12 345 6789 or yourmail@email.com', message: '例如：为我的 Sdn Bhd 设置电子发票' },
     cards: [
       { icon: 'whatsapp-logo', label: 'WhatsApp', value: '+60 1X XXX XXXX（待定）' },
       { icon: 'envelope-simple', label: '电邮', value: 'info@perfectadvisory.com.my' },
-      { icon: 'map-pin', label: '办公室', value: '地址待定，吉隆坡（由客户确认）' },
+      // { icon: 'map-pin', label: '办公室', value: '地址待定，吉隆坡（由客户确认）' },
     ],
     sending: '发送中…',
     success: '谢谢，我们会尽快回覆。',

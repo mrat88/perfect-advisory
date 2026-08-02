@@ -16,7 +16,7 @@ export function Faq({ c }: { c: SiteContent }) {
         </Reveal>
         <Reveal className="faq-list" delay={120}>
           {f.items.map((it, i) => (
-            <details key={i} open={i === 0}>
+            <details key={i} name="faq" open={i === 0}>
               <summary>
                 {it.q}
                 <Icon name="plus" size={20} />
