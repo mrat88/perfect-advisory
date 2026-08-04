@@ -75,7 +75,7 @@ export const en: SiteContent = {
     heading: 'Cheaper than a mistake, faster than doing it yourself',
     body:
       'A missed EPF or tax deadline costs penalties and interest. A full-time accountant costs a salary. We sit in between: a qualified team on call for a fixed monthly fee, so you get it right without the overhead.',
-    photoAlt: 'Placeholder: client meeting',
+    photoAlt: 'An adviser and a client reviewing financial reports together',
     checks: [
       { title: 'Qualified, experienced professionals', note: 'Credentials placeholder, client to confirm' },
       { title: 'Every statutory deadline tracked', note: 'SSM, LHDN, EPF, SOCSO, SST and e-invoice' },

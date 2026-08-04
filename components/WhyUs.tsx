@@ -1,6 +1,5 @@
 import type { SiteContent } from '@/content/types'
 import { Icon } from './Icon'
-import { PhotoSlot } from './Logo'
 import { Reveal } from './Reveal'
 
 export function WhyUs({ c }: { c: SiteContent }) {
@@ -9,7 +8,8 @@ export function WhyUs({ c }: { c: SiteContent }) {
     <section id="why">
       <div className="wrap why-grid">
         <Reveal className="why-photo">
-          <PhotoSlot label={w.photoAlt} logoSize={52} />
+          {/* eslint-disable-next-line @next/next/no-img-element -- static export, unoptimized */}
+          <img className="why-img" src="/images/why.jpg" alt={w.photoAlt} width={1600} height={1200} loading="lazy" />
         </Reveal>
         <Reveal className="why-copy" delay={120}>
           <span className="eyebrow">{w.eyebrow}</span>

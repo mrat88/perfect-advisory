@@ -74,7 +74,7 @@ export const zh: SiteContent = {
     heading: '比出错便宜，比自己做快',
     body:
       '漏了 EPF 或报税死线，罚款加利息；请个全职会计，是一份薪水。我们夹在中间：固定月费、随传随到的专业团队，让你做对，又不必背负开销。',
-    photoAlt: '占位图：客户会议',
+    photoAlt: '顾问与客户一起核对财务报表',
     checks: [
       { title: '合格且经验丰富的专业团队', note: '资质待定，由客户确认' },
       { title: '每个法定截止日都盯着', note: 'SSM、LHDN、EPF、SOCSO、SST 与电子发票' },
