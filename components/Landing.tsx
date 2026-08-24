@@ -1,5 +1,6 @@
 import type { SiteContent } from '@/content/types'
 import { GoldGradientDef } from './Logo'
+import { JsonLd } from './JsonLd'
 import { RevealObserver } from './RevealObserver'
 import { Header } from './Header'
 import { Hero } from './Hero'
@@ -17,6 +18,7 @@ import { WhatsAppFab } from './WhatsAppFab'
 export function Landing({ c }: { c: SiteContent }) {
   return (
     <>
+      <JsonLd c={c} />
       <GoldGradientDef />
       <RevealObserver />
       <Header c={c} />
