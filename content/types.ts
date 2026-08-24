@@ -60,6 +60,7 @@ export interface ContactCard {
   icon: string
   label: string
   value: string
+  href?: string // makes the card a link (e.g. mailto: or wa.me); omitted = plain card
 }
 
 export interface SiteContent {
@@ -82,7 +83,9 @@ export interface SiteContent {
   why: { eyebrow: string; heading: string; body: string; photoAlt: string; checks: Check[] }
   faq: { eyebrow: string; heading: string; intro: string; items: Faq[] }
   contact: {
+    eyebrow: string
     heading: string
+    intro: string
     fields: { name: string; contact: string; message: string }
     placeholders: { name: string; contact: string; message: string }
     cards: ContactCard[]

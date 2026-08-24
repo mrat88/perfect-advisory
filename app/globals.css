@@ -287,12 +287,16 @@ input, textarea {
 }
 input::placeholder, textarea::placeholder { color: #9a9a9a; }
 input:focus, textarea:focus { outline: 2px solid var(--color-gold-1); outline-offset: 1px; border-color: transparent; }
+.contact-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+.contact-head p { max-width: 540px; margin: 14px auto 0; }
 .contact-side { padding-top: 68px; }
-.contact-cards { display: flex; flex-direction: column; gap: 14px; margin-top: 26px; }
+.contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 34px; text-align: left; }
 .ccard { border: 1px solid var(--color-line); border-radius: var(--radius-card); padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; background: #fff; box-shadow: 0 10px 28px rgba(58, 58, 58, 0.05); }
+a.ccard { transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+a.ccard:hover { transform: translateY(-2px); border-color: var(--color-gold-1); box-shadow: 0 16px 36px rgba(58, 58, 58, 0.09); }
 .ccard i { font-size: 24px; color: var(--color-gold-deep); margin-top: 2px; flex: none; }
 .ccard b { display: block; font-size: 15.5px; color: var(--color-ink); font-weight: 600; }
-.ccard span { font-size: 14.5px; color: var(--color-body); }
+.ccard span { font-size: 14.5px; color: var(--color-body); word-break: break-word; }
 .form-note { font-size: 14px; margin-top: 4px; }
 .form-note.ok { color: #2f7d4f; }
 .form-note.err { color: #b0433a; }
@@ -341,6 +345,7 @@ input:focus, textarea:focus { outline: 2px solid var(--color-gold-1); outline-of
   .site-header .nav-right .btn-dark { display: none; }
   .brand-name { font-size: 15.5px; }
   .nav { height: 64px; }
+  .contact-cards { grid-template-columns: 1fr; }
 }
 
 /* Scroll reveal. Visible by default (no-JS safe). Only hidden when JS is active

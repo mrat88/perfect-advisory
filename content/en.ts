@@ -111,12 +111,14 @@ export const en: SiteContent = {
     ],
   },
   contact: {
+    eyebrow: 'Get in touch',
     heading: 'Talk to us',
+    intro: 'WhatsApp us for a quick reply, or send an email. Either way you reach the same team that handles your books.',
     fields: { name: 'Name', contact: 'Phone or email', message: 'What do you need help with?' },
     placeholders: { name: 'Your name', contact: '+60 12 345 6789 or yourmail@email.com', message: 'e.g. e-invoice setup for my Sdn Bhd' },
     cards: [
       { icon: 'whatsapp-logo', label: 'WhatsApp', value: '+60 1X XXX XXXX (placeholder)' },
-      { icon: 'envelope-simple', label: 'Email', value: 'info@perfectadvisory.com.my' },
+      { icon: 'envelope-simple', label: 'Email', value: 'info@perfectadvisory.com.my', href: 'mailto:info@perfectadvisory.com.my' },
       // { icon: 'map-pin', label: 'Office', value: 'Address placeholder, Kuala Lumpur (client to confirm)' },
     ],
     sending: 'Sending…',

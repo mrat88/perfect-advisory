@@ -110,12 +110,14 @@ export const zh: SiteContent = {
     ],
   },
   contact: {
+    eyebrow: '开始咨询',
     heading: '联系我们',
+    intro: '用 WhatsApp 联系最快，或者发电邮给我们。不论哪种，接洽你的都是同一个团队。',
     fields: { name: '姓名', contact: '电话或电邮', message: '需要什么帮助？' },
     placeholders: { name: '你的名字', contact: '+60 12 345 6789 or yourmail@email.com', message: '例如：为我的 Sdn Bhd 设置电子发票' },
     cards: [
       { icon: 'whatsapp-logo', label: 'WhatsApp', value: '+60 1X XXX XXXX（待定）' },
-      { icon: 'envelope-simple', label: '电邮', value: 'info@perfectadvisory.com.my' },
+      { icon: 'envelope-simple', label: '电邮', value: 'info@perfectadvisory.com.my', href: 'mailto:info@perfectadvisory.com.my' },
       // { icon: 'map-pin', label: '办公室', value: '地址待定，吉隆坡（由客户确认）' },
     ],
     sending: '发送中…',
