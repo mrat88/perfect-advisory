@@ -1,0 +1,62 @@
+name: Deploy dev site to Hostinger
+
+# Builds the Next.js static export and syncs it to dev.perfectadvisory.com.my
+# over FTPS. Runs on every push to main (preview phase) and can be run by hand.
+#
+# Required repository secrets (Settings -> Secrets and variables -> Actions):
+#   FTP_SERVER      Hostinger FTP host (IP or hostname, no ftp:// prefix)
+#   FTP_USERNAME    FTP account username
+#   FTP_PASSWORD    FTP account password
+#   WEB3FORMS_KEY   Web3Forms access key (injected into the build)
+# Optional repository variable:
+#   FTP_SERVER_DIR  Target dir if the default below is wrong for your FTP account
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-dev
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+        env:
+          NEXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
+
+      - name: Keep the dev subdomain out of search engines
+        run: printf 'User-agent: *\nDisallow: /\n' > out/robots.txt
+
+      - name: Deploy to Hostinger (FTPS)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./out/
+          # Path is relative to where the FTP account lands after login. The main
+          # Hostinger FTP account lands in /home/uXXXXXXXX/, so the dev doc root
+          # /home/u910442540/domains/perfectadvisory.com.my/public_html/dev
+          # becomes the path below. If your FTP account is scoped to public_html,
+          # set it to dev/. Override without editing this file by adding an Actions
+          # variable named FTP_SERVER_DIR.
+          server-dir: ${{ vars.FTP_SERVER_DIR || 'domains/perfectadvisory.com.my/public_html/dev/' }}
