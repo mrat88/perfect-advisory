@@ -40,4 +40,6 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./out/
-          server-dir: domains/perfectadvisory.com.my/public_html/dev/
+          # The FTP account lands in the primary domain's public_html, so the dev
+          # subdomain folder (.../public_html/dev) is just dev/ from here.
+          server-dir: dev/
