@@ -11,6 +11,7 @@ export const zh: SiteContent = {
   },
   brand: { name: 'Perfect Advisory Resources', sub: '会计与咨询' },
   nav: [
+    { href: '#about', label: '关于我们' },
     { href: '#services', label: '服务' },
     { href: '#why', label: '为何选我们' },
     { href: '#faq', label: '常见问题' },
@@ -22,10 +23,7 @@ export const zh: SiteContent = {
     eyebrow: '马来西亚中小企业的会计与咨询',
     headline: ['账目清楚。', '准时报税。', '生意前进。'],
     subtext: '记账、薪资、税务、电子发票，一个团队全包，让报税不再脱期，你能专心把生意做大。',
-    creds: [
-      { icon: 'seal-check', label: 'MIA 特许会计团队', note: '（待定）' },
-      { icon: 'shield-check', label: '持牌税务代理', note: '（待定）' },
-    ],
+    creds: [], // 资质徽章暂时隐藏，等客户确认真实资质再显示
     ledger: {
       title: '合规状态',
       status: '正常',
@@ -45,6 +43,14 @@ export const zh: SiteContent = {
     { icon: 'calendar-check', title: '截止日不脱期', text: 'SSM、LHDN、EPF、SOCSO 的日期都替你盯着。' },
     { icon: 'whatsapp-logo', title: 'WhatsApp 找得到人', text: '找到的是真人，不是客服中心。' },
   ],
+  about: {
+    eyebrow: '关于我们',
+    heading: '离你的生意近一点，把数字做利落',
+    body: [
+      'Perfect Advisory Resources 是一家马来西亚会计与咨询事务所，专为中小企业与成长中的公司服务。日常的记账、薪资、税务、电子发票，连同之后的年终财报，我们都替你打理，让生意背后的数字始终清清楚楚。',
+      '我们刻意把团队保持小而贴身。接洽你的，始终是熟悉你账目的同一批人；有问题，用你自己的语言就能得到直接答覆；报税死线，也不必你再熬夜盯着。没有大所的层层架构，没有惊喜账单，只有固定月费下踏实的服务。',
+    ],
+  },
   stats: {
     eyebrow: '为什么重要',
     heading: '中小企业撑起马来西亚经济，合规却靠死线在跑。',
@@ -76,7 +82,7 @@ export const zh: SiteContent = {
       '漏了 EPF 或报税死线，罚款加利息；请个全职会计，是一份薪水。我们夹在中间：固定月费、随传随到的专业团队，让你做对，又不必背负开销。',
     photoAlt: '顾问与客户一起核对财务报表',
     checks: [
-      { title: '合格且经验丰富的专业团队', note: '资质待定，由客户确认' },
+      { title: '合格且经验丰富的专业团队' },
       { title: '每个法定截止日都盯着', note: 'SSM、LHDN、EPF、SOCSO、SST 与电子发票' },
       { title: '用你自己的语言沟通', note: '英语、马来语、华语与粤语' },
       { title: '为中小企业与初创量身打造', note: '没有大所的开销，WhatsApp 回覆快' },
@@ -112,11 +118,18 @@ export const zh: SiteContent = {
   contact: {
     eyebrow: '开始咨询',
     heading: '联系我们',
-    intro: '用 WhatsApp 联系最快，或者发电邮给我们。不论哪种，接洽你的都是同一个团队。',
+    intro: '用 WhatsApp 联系最快，或者填下面的表单。不论哪种，接洽你的都是同一个团队。',
+    steps: [
+      { title: '说说你的需求', text: '简单讲讲你的生意，以及卡在哪。' },
+      { title: '我们评估并报价', text: '谈定工作范围与固定月费，事先讲清楚。' },
+      { title: '我们接手', text: '交接不留空档，报税不断，通常几周内完成。' },
+    ],
+    reassure: '真人回覆，能用英语、马来语、华语或粤语。',
+    formTitle: '发送消息',
     fields: { name: '姓名', contact: '电话或电邮', message: '需要什么帮助？' },
     placeholders: { name: '你的名字', contact: '+60 12 345 6789 or yourmail@email.com', message: '例如：为我的 Sdn Bhd 设置电子发票' },
     cards: [
-      { icon: 'whatsapp-logo', label: 'WhatsApp', value: '+60 1X XXX XXXX（待定）' },
+      { icon: 'whatsapp-logo', label: 'WhatsApp', value: '+60 10-201 3633', href: 'https://wa.me/60102013633' },
       { icon: 'envelope-simple', label: '电邮', value: 'info@perfectadvisory.com.my', href: 'mailto:info@perfectadvisory.com.my' },
       // { icon: 'map-pin', label: '办公室', value: '地址待定，吉隆坡（由客户确认）' },
     ],
@@ -124,6 +137,7 @@ export const zh: SiteContent = {
     success: '谢谢，我们会尽快回覆。',
     error: '出了点问题，请改用 WhatsApp 联系我们。',
   },
-  footer: { rights: '© 2026 Perfect Advisory Resources. 版权所有。', regNo: '公司注册号：待定' },
+  footer: { rights: '© 2026 Perfect Advisory Resources. 版权所有。', regNo: '' },
   whatsappAria: '用 WhatsApp 联系我们',
+  whatsappText: '你好 Perfect Advisory，我想咨询你们的会计服务。',
 }

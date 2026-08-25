@@ -11,6 +11,7 @@ export const en: SiteContent = {
   },
   brand: { name: 'Perfect Advisory Resources', sub: 'Accounting & Advisory' },
   nav: [
+    { href: '#about', label: 'About' },
     { href: '#services', label: 'Services' },
     { href: '#why', label: 'Why Us' },
     { href: '#faq', label: 'FAQ' },
@@ -23,10 +24,7 @@ export const en: SiteContent = {
     headline: ['Books in order.', 'Taxes on time.', 'Business moving.'],
     subtext:
       'One team for your books, payroll, tax and e-invoice, so filings never slip and you stay focused on growing the business.',
-    creds: [
-      { icon: 'seal-check', label: 'MIA-qualified team', note: '(placeholder)' },
-      { icon: 'shield-check', label: 'Licensed tax agent', note: '(placeholder)' },
-    ],
+    creds: [], // credential badges hidden until the client confirms real credentials
     ledger: {
       title: 'Compliance status',
       status: 'On track',
@@ -46,6 +44,14 @@ export const en: SiteContent = {
     { icon: 'calendar-check', title: 'Deadline discipline', text: 'SSM, LHDN, EPF and SOCSO dates tracked for you.' },
     { icon: 'whatsapp-logo', title: 'Replies on WhatsApp', text: 'Reach a real person, not a call centre.' },
   ],
+  about: {
+    eyebrow: 'About us',
+    heading: 'Close to your business, sharp on the numbers',
+    body: [
+      'Perfect Advisory Resources is a Malaysian accounting and advisory practice for small and growing companies. We handle the everyday work of bookkeeping, payroll, tax and e-invoice, along with the year-end reporting that follows, so the numbers behind your business are always in order.',
+      'We keep the practice small and close on purpose. You reach the same team that knows your accounts, you get a straight answer in your own language, and you never lose a night to a filing deadline. No big-firm layers and no surprise bills, just steady work at a fixed monthly fee.',
+    ],
+  },
   stats: {
     eyebrow: 'Why it matters',
     heading: 'SMEs run the Malaysian economy. Compliance runs on deadlines.',
@@ -77,7 +83,7 @@ export const en: SiteContent = {
       'A missed EPF or tax deadline costs penalties and interest. A full-time accountant costs a salary. We sit in between: a qualified team on call for a fixed monthly fee, so you get it right without the overhead.',
     photoAlt: 'An adviser and a client reviewing financial reports together',
     checks: [
-      { title: 'Qualified, experienced professionals', note: 'Credentials placeholder, client to confirm' },
+      { title: 'Qualified, experienced professionals' },
       { title: 'Every statutory deadline tracked', note: 'SSM, LHDN, EPF, SOCSO, SST and e-invoice' },
       { title: 'Deal with us in your own language', note: 'English, Malay, Mandarin and Cantonese' },
       { title: 'Right-sized for SMEs and startups', note: 'No big-firm overhead, responsive on WhatsApp' },
@@ -113,11 +119,18 @@ export const en: SiteContent = {
   contact: {
     eyebrow: 'Get in touch',
     heading: 'Talk to us',
-    intro: 'WhatsApp us for a quick reply, or send an email. Either way you reach the same team that handles your books.',
+    intro: 'WhatsApp us for a quick reply, or send the form below. Either way you reach the same team that handles your books.',
+    steps: [
+      { title: 'Tell us what you need', text: 'A short message about your business and where things are stuck.' },
+      { title: 'We scope it and quote', text: 'We agree the work and a fixed monthly fee, up front.' },
+      { title: 'We take it over', text: 'Handover with no gap in your filings, usually within a few weeks.' },
+    ],
+    reassure: 'A real person replies, in English, Malay, Mandarin or Cantonese.',
+    formTitle: 'Send a message',
     fields: { name: 'Name', contact: 'Phone or email', message: 'What do you need help with?' },
     placeholders: { name: 'Your name', contact: '+60 12 345 6789 or yourmail@email.com', message: 'e.g. e-invoice setup for my Sdn Bhd' },
     cards: [
-      { icon: 'whatsapp-logo', label: 'WhatsApp', value: '+60 1X XXX XXXX (placeholder)' },
+      { icon: 'whatsapp-logo', label: 'WhatsApp', value: '+60 10-201 3633', href: 'https://wa.me/60102013633' },
       { icon: 'envelope-simple', label: 'Email', value: 'info@perfectadvisory.com.my', href: 'mailto:info@perfectadvisory.com.my' },
       // { icon: 'map-pin', label: 'Office', value: 'Address placeholder, Kuala Lumpur (client to confirm)' },
     ],
@@ -125,6 +138,7 @@ export const en: SiteContent = {
     success: 'Thanks. We will reply shortly.',
     error: 'Something went wrong. Please WhatsApp us instead.',
   },
-  footer: { rights: '© 2026 Perfect Advisory Resources. All rights reserved.', regNo: 'Co. Reg. No: placeholder' },
+  footer: { rights: '© 2026 Perfect Advisory Resources. All rights reserved.', regNo: '' },
   whatsappAria: 'Chat with us on WhatsApp',
+  whatsappText: 'Hi Perfect Advisory, I would like to ask about your accounting services.',
 }

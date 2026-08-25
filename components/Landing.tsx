@@ -1,10 +1,10 @@
 import type { SiteContent } from '@/content/types'
-import { GoldGradientDef } from './Logo'
 import { JsonLd } from './JsonLd'
 import { RevealObserver } from './RevealObserver'
 import { Header } from './Header'
 import { Hero } from './Hero'
 import { TrustStrip } from './TrustStrip'
+import { About } from './About'
 import { StatsBand } from './StatsBand'
 import { Services } from './Services'
 import { WhyUs } from './WhyUs'
@@ -19,12 +19,12 @@ export function Landing({ c }: { c: SiteContent }) {
   return (
     <>
       <JsonLd c={c} />
-      <GoldGradientDef />
       <RevealObserver />
       <Header c={c} />
       <main>
         <Hero c={c} />
         <TrustStrip c={c} />
+        <About c={c} />
         <StatsBand c={c} />
         <Services c={c} />
         <WhyUs c={c} />

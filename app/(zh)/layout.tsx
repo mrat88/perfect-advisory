@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     url: 'https://perfectadvisory.com.my/zh/',
     locale: 'zh_MY',
     type: 'website',
+    images: [{ url: '/logo-full.jpg', width: 1800, height: 300, alt: 'Perfect Advisory Resources' }],
   },
 }
 

@@ -78,6 +78,7 @@ export interface SiteContent {
     ledger: Ledger
   }
   strip: StripItem[]
+  about: { eyebrow: string; heading: string; body: string[] }
   stats: { eyebrow: string; heading: string; intro: string; items: Stat[] }
   services: { eyebrow: string; heading: string; intro: string; items: Service[] }
   why: { eyebrow: string; heading: string; body: string; photoAlt: string; checks: Check[] }
@@ -86,6 +87,9 @@ export interface SiteContent {
     eyebrow: string
     heading: string
     intro: string
+    steps: { title: string; text: string }[]
+    reassure: string
+    formTitle: string
     fields: { name: string; contact: string; message: string }
     placeholders: { name: string; contact: string; message: string }
     cards: ContactCard[]
@@ -95,4 +99,5 @@ export interface SiteContent {
   }
   footer: { rights: string; regNo: string }
   whatsappAria: string
+  whatsappText: string // pre-filled message for wa.me links
 }

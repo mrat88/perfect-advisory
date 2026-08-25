@@ -20,7 +20,7 @@ export function Footer({ c }: { c: SiteContent }) {
         </div>
         <div className="foot-meta">
           <span>{c.footer.rights}</span>
-          <span>{c.footer.regNo}</span>
+          {c.footer.regNo && <span>{c.footer.regNo}</span>}
         </div>
       </div>
     </footer>

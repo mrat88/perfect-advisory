@@ -1,36 +1,12 @@
-// Placeholder "PA" mark. Replace with the client's real logo SVG before launch.
-// The gold gradient is defined once via <GoldGradientDef/> (rendered in Landing)
-// and referenced by id, so the mark stays a server component with no hooks.
+// Client's real "PA" mark, a gold-gradient line drawing. The source vector lives
+// in public/logo-mark.svg (traced from the client's file, then recolored to the
+// brand gold gradient #C9971B → #F5D33F). Rendered as an <img> so it stays a plain
+// server component and scales crisply at every size used (header 40, footer 34).
 
 export function Logo({ size = 40 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden="true">
-      <rect x="3" y="3" width="42" height="42" rx="10" stroke="url(#pa-gold)" strokeWidth="3.5" />
-      <text
-        x="24"
-        y="32"
-        textAnchor="middle"
-        fontFamily="var(--font-sans)"
-        fontWeight="700"
-        fontSize="21"
-        fill="url(#pa-gold)"
-      >
-        PA
-      </text>
-    </svg>
-  )
-}
-
-export function GoldGradientDef() {
-  return (
-    <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
-      <defs>
-        <linearGradient id="pa-gold" x1="4" y1="44" x2="44" y2="4" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#c9971b" />
-          <stop offset="1" stopColor="#f5d33f" />
-        </linearGradient>
-      </defs>
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element -- static export, unoptimized
+    <img src="/logo-mark.svg" alt="" aria-hidden="true" width={size} height={size} />
   )
 }
 

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { SiteContent } from '@/content/types'
 import { Icon } from './Icon'
 import { Logo } from './Logo'
+import { waHref } from './whatsapp'
 
 export function Header({ c }: { c: SiteContent }) {
   const [open, setOpen] = useState(false)
@@ -52,8 +53,13 @@ export function Header({ c }: { c: SiteContent }) {
             {' | '}
             {c.langToggle.active === 'zh' ? <b>中文</b> : <Link href={c.langToggle.zhHref}>中文</Link>}
           </span>
-          {/* TODO: swap #contact for wa.me/<number> once the client confirms the WhatsApp line */}
-          <a className="btn btn-dark btn-sm" href="#contact" aria-label={c.cta.whatsapp}>
+          <a
+            className="btn btn-dark btn-sm"
+            href={waHref(c.whatsappText)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={c.cta.whatsapp}
+          >
             <Icon name="whatsapp-logo" size={16} weight="fill" /> <span className="btn-label">{c.cta.whatsapp}</span>
           </a>
           <button

@@ -17,6 +17,7 @@ export function JsonLd({ c }: { c: SiteContent }) {
         name: c.brand.name,
         description: c.meta.description,
         url,
+        logo: `${SITE}/logo-mark.png`,
         email: 'info@perfectadvisory.com.my',
         areaServed: { '@type': 'Country', name: 'Malaysia' },
         knowsLanguage: ['en', 'ms', 'zh-Hans', 'yue'],
