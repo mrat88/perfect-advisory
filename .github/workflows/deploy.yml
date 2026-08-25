@@ -28,7 +28,8 @@ jobs:
         run: npm run build
 
       - name: Keep the dev subdomain out of search engines
-        run: printf 'User-agent: *\nDisallow: /\n' > out/robots.txt
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > out/robots.txt
 
       - name: Deploy to Hostinger over FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
